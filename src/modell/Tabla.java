@@ -32,13 +32,29 @@ public class Tabla {
         Random rnd = new Random();
         int kiralynoDb=0;
         while(kiralynoDb<n){
-            int sor=rnd.nextInt(t.length);
-            int oszlop=rnd.nextInt(t[sor].length);
-            if(t[sor][oszlop]!='K')
+            int oszlop=rnd.nextInt(t.length);
+            int sor=rnd.nextInt(t[oszlop].length);
+            if(t[oszlop][sor]!='K')
             {
-                t[sor][oszlop] = 'K';
+                t[oszlop][sor] = 'K';
                 kiralynoDb++;
             }
         }
+    }
+    
+    public boolean uresOszlop(int oszlop){
+        int ix=0;
+        while(ix <t.length && t[ix][oszlop]!='K') {
+            ix++;
+        }
+        return ix<t.length;
+    }
+    
+    public boolean uresSor(int sor){
+        int ix=0;
+        while(ix <t[0].length && t[sor][ix]!='K') {
+            ix++;
+        }
+        return ix<t.length;
     }
 }
