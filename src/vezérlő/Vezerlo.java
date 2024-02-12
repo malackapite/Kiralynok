@@ -12,5 +12,7 @@ public class Vezerlo {
         this.nezet = nezet;
     
         nezet.megjelenit(modell.getTabla());
+        modell.Elhelyez(8);
+        nezet.megjelenit(modell.getTabla());
     }
 }

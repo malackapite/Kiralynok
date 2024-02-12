@@ -33,7 +33,12 @@ public class Tabla {
         int kiralynoDb=0;
         while(kiralynoDb<n){
             int sor=rnd.nextInt(t.length);
-            t[sor][rnd.nextInt(t[sor].length)] = 'K';
+            int oszlop=rnd.nextInt(t[sor].length);
+            if(t[sor][oszlop]!='K')
+            {
+                t[sor][oszlop] = 'K';
+                kiralynoDb++;
+            }
         }
     }
 }
