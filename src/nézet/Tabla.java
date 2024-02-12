@@ -1,5 +1,6 @@
-package modell;
+package nézet;
 
+import java.io.File;
 import java.util.Random;
 
 public class Tabla {

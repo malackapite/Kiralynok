@@ -29,29 +29,26 @@ public class GUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        tablaTextArea = new javax.swing.JTextArea();
+        tablaLabel = new javax.swing.JLabel();
+        sorLabel = new javax.swing.JLabel();
+        oszlopLabel = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Királynők");
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        tablaTextArea.setEditable(false);
+        tablaTextArea.setColumns(8);
+        tablaTextArea.setRows(8);
+        jScrollPane1.setViewportView(tablaTextArea);
 
-        jLabel1.setText("Tábla:");
+        tablaLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        tablaLabel.setText("Tábla:");
 
-        jLabel2.setText("Sor:");
+        sorLabel.setText("Sor:");
 
-        jLabel3.setText("Oszlop:");
-
-        jMenu1.setText("Feladat");
-        jMenuBar1.add(jMenu1);
-
+        oszlopLabel.setText("Oszlop:");
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -59,28 +56,28 @@ public class GUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(74, 74, 74)
+                .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(42, 42, 42)
-                        .addComponent(jLabel3))
-                    .addComponent(jLabel1)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(103, Short.MAX_VALUE))
+                        .addComponent(sorLabel)
+                        .addGap(29, 29, 29)
+                        .addComponent(oszlopLabel))
+                    .addComponent(tablaLabel))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(tablaLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3))
-                .addContainerGap(36, Short.MAX_VALUE))
+                    .addComponent(sorLabel)
+                    .addComponent(oszlopLabel))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
@@ -91,24 +88,23 @@ public class GUI extends javax.swing.JFrame {
      */
 
     public void megjelenit(String text){
-        jTextArea1.setText(text);
+        tablaTextArea.setText(text);
     }
     
     public void setSor(String text){
-        jLabel2.setText(text);
+        sorLabel.setText(text);
     }
     
     public void setOszlop(String text){
-        jLabel3.setText(text);
+        oszlopLabel.setText(text);
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel oszlopLabel;
+    private javax.swing.JLabel sorLabel;
+    private javax.swing.JLabel tablaLabel;
+    private javax.swing.JTextArea tablaTextArea;
     // End of variables declaration//GEN-END:variables
 }
