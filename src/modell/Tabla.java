@@ -1,5 +1,7 @@
 package modell;
 
+import java.util.Random;
+
 public class Tabla {
     
     private char[][] t;
@@ -24,5 +26,14 @@ public class Tabla {
             tmp+="\r\n";
         }
         return tmp;
+    }
+    
+    public void Elhelyez(int n){
+        Random rnd = new Random();
+        int kiralynoDb=0;
+        while(kiralynoDb<n){
+            int sor=rnd.nextInt(t.length);
+            t[sor][rnd.nextInt(t[sor].length)] = 'K';
+        }
     }
 }
