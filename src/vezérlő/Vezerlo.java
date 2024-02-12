@@ -14,5 +14,8 @@ public class Vezerlo {
         nezet.megjelenit(modell.getTabla());
         modell.Elhelyez(8);
         nezet.megjelenit(modell.getTabla());
+        nezet.setSor("Sor: "+modell.getUresSorokSzama()+ "db");
+        nezet.setOszlop("Oszlop: "+modell.getUresOszlopokSzama()+ "db");
+        
     }
 }
